@@ -9,8 +9,13 @@ export class CargaImagenesService {
 
   constructor( private db:AngularFirestore ) { }
 
-  private guardarImagen( imagen:any ){
-    this.db.collection(`/${this.CARPETA_IMAGENES}`);
+  cargarImagenesFirebase( imagenes: FileItem[] ){
+    console.log(imagenes);
+  }
+
+  private guardarImagen( imagen:{ nombre:string, url:string } ){
+    this.db.collection(`/${this.CARPETA_IMAGENES}`)
+    .add( imagen )
   }
 
 }
