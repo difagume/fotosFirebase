@@ -1,6 +1,8 @@
-import { RouterModule, Routes } from '@angular/router';
+
+import { Routes, RouterModule } from '@angular/router';
 import { FotosComponent } from './components/fotos/fotos.component';
 import { CargaComponent } from './components/carga/carga.component';
+
 
 const RUTAS: Routes = [
     { path: 'fotos', component: FotosComponent },
@@ -8,4 +10,5 @@ const RUTAS: Routes = [
     { path: '**', pathMatch: 'full', redirectTo: 'fotos' }
 ];
 
-export const APPROUTING = RouterModule.forRoot(RUTAS);
+
+export const APP_ROUTES = RouterModule.forRoot( RUTAS );
